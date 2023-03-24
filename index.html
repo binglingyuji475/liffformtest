@@ -73,10 +73,10 @@
                 const tel = $('input[name="tel"]').val();
                 const email  = $('input[name="email"]').val();
                 const text  = $('input[name="text"]').val();
-                const memo  = '【お問い合わせありがとうございます。】';
+                const memo  = '【お問い合わせありがとうございます】';
                 
                 
-                const msg = `${name}\n${tel}\n${email}\n${text}\n${memo}`;
+                const msg = `${name}\n${tel}\n${email}\n${text}\n\n${memo}`;
                 sendText(msg);
 
                 return false;
