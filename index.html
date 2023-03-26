@@ -99,8 +99,8 @@
                         <input id="confirm-button" class="m-btn m-btn-blue-light" type="button" name="confirm" value="登録内容を確認する">
                     </div>
                     <div class="form-btn column confirm-mode" id="confirm-mode-btn-wrapper" style="display: none">
-                        <button id="comp-button" class="m-btn m-btn-blue-light" type="button" name="comp">送信する</button>
-                        <input id="back-button" class="m-btn m-btn-gray" type="button"  value="修正する">
+                        <button id="comp-button" class="m-btn m-btn-blue-light" type="submit" name="comp">送信する</button>
+                        <input id="back-button" class="m-btn m-btn-gray" type="submit"  value="修正する">
                     </div>
                 </div>
                 
@@ -182,7 +182,7 @@
         const key = params.get('key');
 
         $(function () {
-            $('form').button(function () {
+            $('form').submit(function () {
                 const title  = '[お問い合わせ内容]';
                 const name = $('input[name="name"]').val();
                 const tel = $('input[name="tel"]').val();
