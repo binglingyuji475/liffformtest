@@ -83,32 +83,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-    <script>
-                        var trigger = document.querySelectorAll('input[type="number"]');
-
-                        trigger.forEach(function (target) {
-                            console.log(target)
-                            target.addEventListener('keyup', function (e) {
-                                if (Number(e.target.value) < 0) {
-                                        e.target.value = ""
-                                    }
-                            });
-                            target.addEventListener('mouseup', function (e) {
-                                if (Number(e.target.value) < 0) {
-                                        e.target.value = ""
-                                    }
-                            });
-                        });
-                        var validateRulesObj = {"name":[{"validateType":"InputString","errorMessage":"こちらの項目は必須です。"},{"validateType":"MinString","length":"1","errorMessage":"1文字以上入力してください。"},{"validateType":"MaxString","length":"50","errorMessage":"入力文字数が50文字を超えています。"}],"postcode":[{"validateType":"Number","errorMessage":"半角数字で入力してください。"},{"validateType":"InputString","errorMessage":"こちらの項目は必須です。"},{"validateType":"MinString","length":"1","errorMessage":"1文字以上入力してください。"},{"validateType":"MaxString","length":"7","errorMessage":"入力文字数が7文字を超えています。"}],"address":[{"validateType":"InputString","errorMessage":"こちらの項目は必須です。"}],"address2":[{"validateType":"InputString","errorMessage":"こちらの項目は必須です。"}],"address3":{},"phonenumber":[{"validateType":"InputString","errorMessage":"こちらの項目は必須です。"},{"validateType":"Number","errorMessage":"半角数字で入力してください。"}]};
-                        // バリデーション処理：onSubmitで呼び出し
-                        window.addEventListener("load", function (e) {
-                            var BtnControlObj = new BtnControl(validateRulesObj);
-                            BtnControlObj.initialize();
-                        });
 
 
-                  
-    
+
+            
    
    
         
