@@ -1,47 +1,24 @@
-<html lang="ja">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="robots" content="noindex">
-        <title>当選登録フォーム|春のレグザとお友だちになろう！キャンペーン</title>
-        <link rel="stylesheet" href="https://geppy-liff.s3-ap-northeast-1.amazonaws.com/lambda-assets/css/style.css">
-        <link rel="stylesheet" href="https://geppy-liff.s3-ap-northeast-1.amazonaws.com/lambda-assets/css/form.css">
-    </head>
-    <body class="mb-entry">
-        <form action="./done" method="post" id='confirmSubmit' name="cpform" class="h-adr">
-            
-            <div id="form-wrapper">
-                <div id="confirm-wrapper" style="display: none">
-                    <h1 id="confirm-title" class="form-ttl">入力内容確認</h1>
-                    <div id="confirm-message" class="form-message">
-                        <p>入力内容を確認した後、送信ボタンを押してください。</p>
-                    </div>
-                </div>
-                <div id="input-wrapper">
-                    <h1 id="form-title" class="form-ttl" style="background-color:#000000;">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問い合わせフォーム</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    
+   
+    
+    
+</head>
+<body>
+<h1 id="form-title" class="form-ttl" align="center" style="background-color:#000000; color:white;">
 当選登録フォーム
 </h1>
-                    本フォームは「青森県産サンふじプレミアム特糖賞1段3kg」の当選者のみにお送しております。
-下記のフォームに必要事項を入力し、「確認」ボタンを押してください。
 
-お預かりしたお客様の個人情報は当選者の連絡確認にのみ使用させていただきます。
-                    <div id="form-message" class="form-message">
-                        <p></p>
-                        <div class="note-box">
-                            <p>※ご住所の入力をお間違えになると賞品の発送ができませんので、ご注意ください(番地以降の未記入・漏れなど)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-box">
-                    <input type="hidden" name="lineUserId" id='lineUserId'>
-                    <input type="hidden" name="displayName" id='displayName'>
-                    <input type="hidden" name="top_url">
-                    <input type="hidden" name="liff_app" id='liff_app' value="1660782608-xn7Qk6MO">
-                    <input type="hidden" id='kAppId' value="1157">
-
-                    
-       <div class="form-box-sub">
+  <div class="form-box-sub">
             <label class="form-label" for="name">氏名<span>必須</span></label>
             <div class="form-box-inner">
                 <input type="text" class="confirm-disable" name="name" placeholder="" >
@@ -49,39 +26,66 @@
             </div>
         </div>
         
+        <div class="form-box-sub">
+            <span class="p-country-name" style="display:none;">Japan</span>
+            <label class="form-label" for="postcode">郵便番号<span>必須</span></label>
+            <div class="form-box-inner">
+                <input type="tel" class="p-postal-code confirm-disable" name="postcode" placeholder="">
+                <p class="note">※半角数字7ケタ、ハイフンなしで入力してください。</p>
+                <p id='postcode_error' class=""></p>
+            </div>
+        </div>
         
+        <div class="form-box-sub">
+            <label class="form-label" for="address">市区町村<span>必須</span></label>
+            <div class="form-box-inner">
+                <input type="text" class="confirm-disable" name="address" placeholder="" >
+                <p id='address_error' class=""></p>
+            </div>
+        </div>
+        
+        <div class="form-box-sub">
+            <label class="form-label" for="address2">丁番地<span>必須</span></label>
+            <div class="form-box-inner">
+                <input type="text" class="confirm-disable" name="address2" placeholder="" >
+                <p id='address2_error' class=""></p>
+            </div>
+        </div>
+        
+        <div class="form-box-sub">
+            <label class="form-label" for="address3">建物名</label>
+            <div class="form-box-inner">
+                <input type="text" class="confirm-disable" name="address3" placeholder="" >
+                <p id='address3_error' class=""></p>
+            </div>
+        </div>
+        
+        <div class="form-box-sub">
+            <label class="form-label" for="phonenumber">電話番号<span>必須</span></label>
+            <div class="form-box-inner">
+                <input type="text" class="confirm-disable" name="phonenumber" placeholder="" >
+                <p id='phonenumber_error' class=""></p>
+            </div>
+        </div>
         
 
                     
 
                     <div class="form-btn column" id="input-mode-btn-wrapper">
-                        <input class="m-btn m-btn-blue-light" type="submit"  value="送信">
+                        <input class="m-btn m-btn-blue-light" type="submit" value="送信">
                     </div>
-                    
+                  
                 </div>
                 
             </div>
-        </form>
-     </body>
-   
+</form>
     
-   
-    
-     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-
-
-
-            
-   
-   <script>
- 
-       
-      
-       
+    <script>
         
         $(document).ready(function () {
             const liffId = "1660782608-xn7Qk6MO";
