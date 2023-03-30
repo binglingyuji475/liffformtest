@@ -10,26 +10,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tinymce@5.9.2/css/tinymce.min.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center mb-5">咨询页面</h1>
-    <!-- 姓名输入框 -->
-    <div class="form-group">
-      <label for="name">姓名：</label>
-      <input type="text" class="form-control" id="name" name="name" required>
+  <form id="contact">
+  <div class="container">
+    <div class="head">
+      <h2>Say Hello</h2>
     </div>
-    <!-- 电话号码输入框 -->
-    <div class="form-group">
-      <label for="phone">电话号码：</label>
-      <input type="tel" class="form-control" id="phone" name="phone" required>
-    </div>
-    <!-- 咨询内容输入框 -->
-    <div class="form-group">
-      <label for="content">咨询内容：</label>
-      <textarea id="content" name="content"></textarea>
-    </div>
-    <!-- 提交按钮 -->
-    <button class="btn btn-primary btn-block">提交</button>
+    <input type="text" name="name" placeholder="Name" /><br />
+    <input  type="email" name="email" placeholder="Email" /><br />
+    <textarea type="text" name="message" placeholder="Message"></textarea><br />
+    <div class="message">Message Sent</div>
+    <button id="submit" type="submit">
+      Send!
+    </button>
   </div>
+</form>
 
 
 
